@@ -15,5 +15,5 @@ for test_case in range(1, T + 1):
         else:
             score_data[score] = 1
 
-    sorted_score_data = sorted(score_data.items(), key=lambda x: x[1], reverse=True)
+    sorted_score_data = sorted(score_data.items(), key=lambda x:x[1], reverse=True)
     print("#" + str(test_case) + " " + str(sorted_score_data.pop(0)[0]))

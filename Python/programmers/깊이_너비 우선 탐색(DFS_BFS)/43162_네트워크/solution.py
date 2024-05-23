@@ -1,6 +1,5 @@
 import collections
 
-
 def solution(n, computers):
     count = 0
     visited = [False for _ in range(n)]

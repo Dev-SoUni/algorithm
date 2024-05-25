@@ -3,7 +3,7 @@ def solution(k, tangerine):
     for t in tangerine:
         tanger_dic[t] = tanger_dic.get(t, 0) + 1
 
-    sort_tanger_dic = sorted(tanger_dic.items(), key=lambda x: x[1], reverse=True)
+    sort_tanger_dic = sorted(tanger_dic.items(), key=lambda x:x[1], reverse=True)
 
     count = 0
     for ta in sort_tanger_dic:
@@ -13,6 +13,3 @@ def solution(k, tangerine):
             break
 
     return count
-
-# 문제
-# https://school.programmers.co.kr/learn/courses/30/lessons/138476

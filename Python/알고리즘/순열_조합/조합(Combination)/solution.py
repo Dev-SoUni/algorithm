@@ -1,17 +1,17 @@
 def combination(n, r):
     answer = []
 
-    def generation(choose, begin):
+    def generate(choose, begin):
         if len(choose) == r:
             answer.append(choose.copy())
+            return
 
         for i in range(begin, len(n)):
             choose.append(n[i])
-            begin = i + 1
-            generation(choose, begin)
+            generate(choose, i + 1)
             choose.pop()
 
-    generation([], 0)
+    generate([], 0)
     return answer
 
 result = combination([1, 2, 3, 4, 5], 2)

@@ -31,4 +31,5 @@ def solution(n):
         for j in i:
             result.append(j)
 
+
     return result

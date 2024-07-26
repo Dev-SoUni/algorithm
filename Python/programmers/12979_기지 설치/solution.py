@@ -16,3 +16,20 @@ def solution(n, stations, w):
 
     return answer
 
+
+# 참고 풀이
+def solution2(n, stations, w):
+    answer = 0
+    range = w + w + 1
+
+    now = 1
+    for station in stations:
+        length = station - w - now
+        if length > 0:
+            answer += math.ceil(length / range)
+        now = station + w + 1
+
+    if n >= now:
+        answer += math.ceil((n - now + 1) / range)
+
+    return answer
